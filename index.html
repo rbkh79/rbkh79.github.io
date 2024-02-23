@@ -20,15 +20,15 @@
             margin: auto;
             overflow: hidden;
         }
-        .profile {
+        .images {
             float: left;
             width: 30%;
             padding: 20px;
             box-sizing: border-box;
         }
-        .profile img {
+        .images img {
             width: 100%;
-            border-radius: 50%;
+            cursor: pointer;
         }
         .resume {
             float: left;
@@ -43,13 +43,28 @@
         <h1>رضا بهره مند خیرآبادی</h1>
     </header>
     <div class="container">
-        <div class="profile">
-            <img src="profile_pic.jpg" alt="عکس پروفایل">
+        <div class="images">
+            <img src="image1.jpg" onclick="showImage('image1_large.jpg')" alt="تصویر 1">
+            <img src="image2.jpg" onclick="showImage('image2_large.jpg')" alt="تصویر 2">
+            <img src="image3.jpg" onclick="showImage('image3_large.jpg')" alt="تصویر 3">
         </div>
-        <div class="resume">
+        <div class="resume" onclick="showResume()">
             <h2>رزومه</h2>
             <p>تحصیلات: ارشد علوم داده</p>
         </div>
     </div>
+
+    <script>
+        function showImage(imageUrl) {
+            var largeImage = document.createElement('img');
+            largeImage.src = imageUrl;
+            largeImage.style.width = '100%';
+            document.body.appendChild(largeImage);
+        }
+
+        function showResume() {
+            alert('رزومه رضا بهره مند خیرآبادی');
+        }
+    </script>
 </body>
 </html>
