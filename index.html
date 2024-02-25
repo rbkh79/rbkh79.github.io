@@ -1,74 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>رضا بهره مند خیرآبادی</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .images {
-            float: left;
-            width: 30%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .images img {
-            width: 100%;
-            cursor: pointer;
-        }
-        .resume {
-            float: left;
-            width: 70%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>رضا بهره مند خیرآبادی</h1>
-    </header>
-    <div class="container">
-        <div class="images" onclick="showImages()">
-            <h2>تصاویر</h2>
-            <img src="photo_2024-02-23_08-41-07.jpg" onclick="showImage('image1_large.jpg')" alt="تصویر 1">
-            <img src="photo_2024-02-23_08-41-17.jpg" onclick="showImage('image2_large.jpg')" alt="تصویر 2">
-            <img src="photo_2024-02-23_08-40-52.jpg" onclick="showImage('image3_large.jpg')" alt="تصویر 3">
-        </div>
-        <div class="resume" onclick="showEducation()">
-            <h2>تحصیلات</h2>
-        </div>
-    </div>
+<!DOCTYPE html> <html> <head> <title>رضا بهره مند خیرآبادی</title> <style> body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; } header { background-color: #333; color: #fff; text-align: center; padding: 10px 0; } .container { width: 80%; margin: auto; overflow: hidden; } .links { text-align: center; padding: 10px 0; background-color: #333; } .links a { color: #fff; text-decoration: none; margin: 0 10px; } .images { display: none; } .resume { float: left; width: 70%; padding: 20px; box-sizing: border-box; } </style> </head> <body> <header> <h1>رضا بهره مند خیرآبادی</h1> </header> <div class="links"> <a href="#" onclick="showImages()">تصاویر</a> <a href="#" onclick="showBio()">بیوگرافی</a> <a href="#" onclick="showEducation()">آموزشی</a> <a href="#" onclick="showMisc()">متفرقه</a> </div> <div class="container"> <div class="images"> <h2>تصاویر</h2> <img src="photo_2024-02-23_08-41-07.jpg" onclick="showImage('image1_large.jpg')" alt="تصویر 1"> <img src="photo_2024-02-23_08-41-17.jpg" onclick="showImage('image2_large.jpg')" alt="تصویر 2"> <img src="photo_2024-02-23_08-40-52.jpg" onclick="showImage('image3_large.jpg')" alt="تصویر 3"> </div> <div class="resume"> <h2>تحصیلات</h2> </div> </div>
+<script>
+    function showImage(imageUrl) {
+        var largeImage = document.createElement('img');
+        largeImage.src = imageUrl;
+        largeImage.style.width = '100%';
+        document.body.appendChild(largeImage);
+    }
 
-    <script>
-        function showImage(imageUrl) {
-            var largeImage = document.createElement('img');
-            largeImage.src = imageUrl;
-            largeImage.style.width = '100%';
-            document.body.appendChild(largeImage);
-        }
+    function showEducation() {
+        alert('دانشجوی کارشناسی ارشد علوم داده دانشگاه فردوسی مشهد، فارغ التحصیل کارشناسی آموزش ریاضی دانشگاه فرهنگیان پردیس شهید بهشتی مشهد، دانش‌آموخته دبیرستان شهید هاشمی نژاد 1 مشهد');
+    }
 
-        function showEducation() {
-            alert('دانشجوی کارشناسی ارشد علوم داده دانشگاه فردوسی مشهد، فارغ التحصیل کارشناسی آموزش ریاضی دانشگاه فرهنگیان پردیس شهید بهشتی مشهد، دانش‌آموخته دبیرستان شهید هاشمی نژاد 1 مشهد');
-        }
+    function showImages() {
+        var imagesDiv = document.querySelector('.images');
+        imagesDiv.style.display = 'block';
+        alert('تصاویر نمایش داده شدند');
+    }
 
-        function showImages() {
-            alert('تصاویر نمایش داده شدند');
-        }
-    </script>
-</body>
-</html>
+    function showBio() {
+        alert('بیوگرافی نمایش داده شد');
+    }
+
+    function showMisc() {
+        window.open('miscellaneous.html', '_blank');
+    }
+</script>
+</body> </html>
