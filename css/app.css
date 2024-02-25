@@ -18,6 +18,11 @@
     function chooseImage() {
         document.getElementById('imageInput').click();
     }
+body {
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
     document.getElementById('imageInput').addEventListener('change', function() {
         var file = this.files[0];
