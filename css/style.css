@@ -1,0 +1,105 @@
+/* General Body Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9e9e9; /* Light grey background */
+    color: #333; /* Dark grey text */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #00509e; /* A distinct blue color */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #003366; /* Darker blue bottom border */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation Menu Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #333; /* Dark background for nav bar */
+}
+
+nav ul li {
+    display: inline-block; /* Display links in a line */
+}
+
+nav ul li a {
+    display: block;
+    color: #fff; /* White link text */
+    text-decoration: none;
+    padding: 15px 20px; /* Padding for clickable area */
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Darker background on hover */
+    color: #ffdd40; /* Yellow text on hover for contrast */
+}
+
+/* Main Content Area Styles */
+main {
+    padding: 20px;
+    min-height: calc(100vh - 250px); /* Ensure main content pushes footer down */
+}
+
+/* Headings Styles */
+h1 {
+    font-size: 2.2em;
+    color: #00509e; /* Blue color for H1 in main */
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #0066cc; /* Slightly lighter blue for H2 */
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Paragraph Styles */
+p {
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text */
+    font-size: 0.9em;
+    /* Removed position: fixed to allow content to push it down */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't add to width */
+}
+
+/* Styling for sections within main for better visual separation */
+main section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
